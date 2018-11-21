@@ -131,6 +131,8 @@ class AttributeValue implements \Serializable
      * Un-serialize this AttributeValue.
      *
      * @param string $serialized The serialized AttributeValue.
+     *
+     * Type hint not possible due to upstream method signature
      */
     public function unserialize($serialized)
     {

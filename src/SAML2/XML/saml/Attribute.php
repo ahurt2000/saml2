@@ -165,7 +165,6 @@ class Attribute
      * @param string     $name      The name of the element.
      * @return \DOMElement
      */
-
     protected function toXMLInternal(\DOMElement $parent, $namespace, $name)
     {
         assert(is_string($namespace));
