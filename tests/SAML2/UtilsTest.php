@@ -2,7 +2,13 @@
 
 declare(strict_types=1);
 
-namespace SAML2;
+namespace SAML2\Tests;
+
+use SAML2\XML\saml\NameID;
+use SAML2\Constants;
+use SAML2\Utils;
+use SAML2\AttributeQuery;
+use SAML2\DOMDocumentFactory;
 
 /**
  * Class \SAML2\UtilsTest
@@ -14,11 +20,11 @@ class UtilsTest extends \PHPUnit\Framework\TestCase
      */
     public function testXpQuery()
     {
-        $nameId_before = new XML\saml\NameID();
-        $nameId_before->value = 'NameIDValue';
-        $nameId_before->Format = 'SomeNameIDFormat';
-        $nameId_before->NameQualifier = 'OurNameQualifier';
-        $nameId_before->SPNameQualifier = 'TheSPNameQualifier';
+        $nameId_before = new NameID();
+        $nameId_before->setValue('NameIDValue');
+        $nameId_before->setFormat('SomeNameIDFormat');
+        $nameId_before->setNameQualifier('OurNameQualifier');
+        $nameId_before->setSPNameQualifier('TheSPNameQualifier');
 
         $aq = new AttributeQuery();
         $aq->setNameID($nameId_before);

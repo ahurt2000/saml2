@@ -2,7 +2,12 @@
 
 declare(strict_types=1);
 
-namespace SAML2;
+namespace SAML2\Tests;
+
+use SAML2\AuthnRequest;
+use SAML2\HTTPPost;
+use SAML2\Response;
+use SAML2\XML\saml\Issuer;
 
 class HTTPPostTest extends \Mockery\Adapter\Phpunit\MockeryTestCase
 {
@@ -74,8 +79,8 @@ class HTTPPostTest extends \Mockery\Adapter\Phpunit\MockeryTestCase
      */
     public function testSendAuthnResponse()
     {
-        $issuer  = new XML\saml\Issuer();
-        $issuer->value = 'testIssuer';
+        $issuer  = new Issuer();
+        $issuer->setValue('testIssuer');
 
         $response = new Response();
         $response->setIssuer($issuer);

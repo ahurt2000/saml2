@@ -2,7 +2,14 @@
 
 declare(strict_types=1);
 
-namespace SAML2;
+namespace SAML2\Tests;
+
+use SAML2\AuthnRequest;
+use SAML2\Constants;
+use SAML2\DOMDocumentFactory;
+use SAML2\XML\saml\Issuer;
+use SAML2\XML\saml\NameID;
+use SAML2\Utils;
 
 /**
  * Class \SAML2\AuthnRequestTest
@@ -133,9 +140,9 @@ AUTHNREQUEST;
     public function testThatTheSubjectCanBeSetBySettingTheNameId()
     {
         $request = new AuthnRequest();
-        $nameId = new XML\saml\NameID();
-        $nameId->value = 'user@example.org';
-        $nameId->Format = Constants::NAMEID_UNSPECIFIED;
+        $nameId = new NameID();
+        $nameId->setValue('user@example.org');
+        $nameId->setFormat(Constants::NAMEID_UNSPECIFIED);
         $request->setNameId($nameId);
 
         $requestAsXML = $request->toUnsignedXML()->ownerDocument->saveXML();
@@ -193,13 +200,13 @@ AUTHNREQUEST;
     public function testThatAnEncryptedNameIdResultsInTheCorrectXmlStructure()
     {
         // the NameID we're going to encrypt
-        $nameId = new XML\saml\NameID();
-        $nameId->value = md5('Arthur Dent');
-        $nameId->Format = Constants::NAMEID_ENCRYPTED;
+        $nameId = new NameID();
+        $nameId->setValue(md5('Arthur Dent'));
+        $nameId->setFormat(Constants::NAMEID_ENCRYPTED);
 
         // the Issuer
-        $issuer = new XML\saml\Issuer();
-        $issuer->value = 'https://gateway.example.org/saml20/sp/metadata';
+        $issuer = new Issuer();
+        $issuer->setValue('https://gateway.example.org/saml20/sp/metadata');
 
         // basic AuthnRequest
         $request = new AuthnRequest();
@@ -254,8 +261,8 @@ AUTHNREQUEST;
     public function testIDPlistAttributes()
     {
         // the Issuer
-        $issuer = new XML\saml\Issuer();
-        $issuer->value = 'https://gateway.example.org/saml20/sp/metadata';
+        $issuer = new Issuer();
+        $issuer->setValue('https://gateway.example.org/saml20/sp/metadata');
 
         // basic AuthnRequest
         $request = new AuthnRequest();
@@ -355,8 +362,8 @@ AUTHNREQUEST;
     public function testRequesterIdIsAddedCorrectly()
     {
         // the Issuer
-        $issuer = new XML\saml\Issuer();
-        $issuer->value = 'https://gateway.example.org/saml20/sp/metadata';
+        $issuer = new Issuer();
+        $issuer->setValue('https://gateway.example.org/saml20/sp/metadata');
 
         // basic AuthnRequest
         $request = new AuthnRequest();
@@ -426,8 +433,8 @@ AUTHNREQUEST;
     public function testProxyCountIsAddedCorrectly()
     {
         // the Issuer
-        $issuer = new XML\saml\Issuer();
-        $issuer->value = 'https://gateway.example.org/saml20/sp/metadata';
+        $issuer = new Issuer();
+        $issuer->setValue('https://gateway.example.org/saml20/sp/metadata');
 
         // basic AuthnRequest
         $request = new AuthnRequest();
@@ -537,8 +544,8 @@ AUTHNREQUEST;
     public function testSettingNameIDPolicy()
     {
         // the Issuer
-        $issuer = new XML\saml\Issuer();
-        $issuer->value = 'https://gateway.example.org/saml20/sp/metadata';
+        $issuer = new Issuer();
+        $issuer->setValue('https://gateway.example.org/saml20/sp/metadata');
 
         // basic AuthnRequest
         $request = new AuthnRequest();
@@ -583,8 +590,8 @@ AUTHNREQUEST;
     public function testSettingNameIDPolicyFormatOnly()
     {
         // the Issuer
-        $issuer = new XML\saml\Issuer();
-        $issuer->value = 'https://gateway.example.org/saml20/sp/metadata';
+        $issuer = new Issuer();
+        $issuer->setValue('https://gateway.example.org/saml20/sp/metadata');
 
         // basic AuthnRequest
         $request = new AuthnRequest();
@@ -622,8 +629,8 @@ AUTHNREQUEST;
     public function testSettingNameIDPolicyToIncorrectTypeAllowCreate()
     {
         // the Issuer
-        $issuer = new XML\saml\Issuer();
-        $issuer->value = 'https://gateway.example.org/saml20/sp/metadata';
+        $issuer = new Issuer();
+        $issuer->setValue('https://gateway.example.org/saml20/sp/metadata');
 
         // basic AuthnRequest
         $request = new AuthnRequest();
@@ -642,8 +649,8 @@ AUTHNREQUEST;
     public function testSettingNameIDPolicyToIncorrectTypeSPNameQualifier()
     {
         // the Issuer
-        $issuer = new XML\saml\Issuer();
-        $issuer->value = 'https://gateway.example.org/saml20/sp/metadata';
+        $issuer = new Issuer();
+        $issuer->setValue('https://gateway.example.org/saml20/sp/metadata');
 
         // basic AuthnRequest
         $request = new AuthnRequest();
@@ -663,8 +670,8 @@ AUTHNREQUEST;
     public function testSettingNameIDPolicyToIncorrectTypeFormat()
     {
         // the Issuer
-        $issuer = new XML\saml\Issuer();
-        $issuer->value = 'https://gateway.example.org/saml20/sp/metadata';
+        $issuer = new Issuer();
+        $issuer->setValue('https://gateway.example.org/saml20/sp/metadata');
 
         // basic AuthnRequest
         $request = new AuthnRequest();
@@ -727,8 +734,8 @@ AUTHNREQUEST;
     public function testSettingForceAuthnResultsInCorrectXML()
     {
         // the Issuer
-        $issuer = new XML\saml\Issuer();
-        $issuer->value = 'https://gateway.example.org/saml20/sp/metadata';
+        $issuer = new Issuer();
+        $issuer->setValue('https://gateway.example.org/saml20/sp/metadata');
 
         // basic AuthnRequest
         $request = new AuthnRequest();
@@ -826,8 +833,8 @@ AUTHNREQUEST;
     public function testSettingIsPassiveResultsInCorrectXML()
     {
         // the Issuer
-        $issuer = new XML\saml\Issuer();
-        $issuer->value = 'https://gateway.example.org/saml20/sp/metadata';
+        $issuer = new Issuer();
+        $issuer->setValue('https://gateway.example.org/saml20/sp/metadata');
 
         // basic AuthnRequest
         $request = new AuthnRequest();
@@ -864,8 +871,8 @@ AUTHNREQUEST;
     public function testSettingProviderNameResultsInCorrectXml()
     {
         // the Issuer
-        $issuer = new XML\saml\Issuer();
-        $issuer->value = 'https://gateway.example.org/saml20/sp/metadata';
+        $issuer = new Issuer();
+        $issuer->setValue('https://gateway.example.org/saml20/sp/metadata');
 
         // basic AuthnRequest
         $request = new AuthnRequest();
@@ -929,8 +936,8 @@ AUTHNREQUEST;
     public function testSettingProtocolBindingAndACSUrl()
     {
         // the Issuer
-        $issuer = new XML\saml\Issuer();
-        $issuer->value = 'https://sp.example.org/saml20/sp/metadata';
+        $issuer = new Issuer();
+        $issuer->setValue('https://sp.example.org/saml20/sp/metadata');
 
         // basic AuthnRequest
         $request = new AuthnRequest();
@@ -1047,9 +1054,12 @@ AUTHNREQUEST;
      */
     public function testAudiencesAreAddedCorrectly()
     {
+        $issuer = new Issuer();
+        $issuer->setValue('https://gateway.example.org/saml20/sp/metadata');
+
         // basic AuthnRequest
         $request = new AuthnRequest();
-        $request->setIssuer('https://gateway.example.org/saml20/sp/metadata');
+        $request->setIssuer($issuer);
         $request->setDestination('https://tiqr.example.org/idp/profile/saml2/Redirect/SSO');
         $request->setAudiences(array('https://sp1.example.org', 'https://sp2.example.org'));
 
