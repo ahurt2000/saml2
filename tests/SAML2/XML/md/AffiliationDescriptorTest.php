@@ -8,7 +8,7 @@ use SAML2\Constants;
 use SAML2\DOMDocumentFactory;
 use SAML2\Utils;
 
-class AffiliationDescriptorTest extends \PHPUnit_Framework_TestCase
+class AffiliationDescriptorTest extends \PHPUnit\Framework\TestCase
 {
     public function testMarshalling()
     {
@@ -78,7 +78,7 @@ XML
 </md:AffiliationDescriptor>
 XML
         );
-        $this->setExpectedException('Exception', 'Missing AffiliateMember in AffiliationDescriptor.');
+        $this->setExpectedException(\Exception::class, 'Missing AffiliateMember in AffiliationDescriptor.');
         new AffiliationDescriptor($document->firstChild);
     }
 
@@ -94,7 +94,7 @@ XML
 XML
         );
 
-        $this->setExpectedException('Exception', 'Missing affiliationOwnerID on AffiliationDescriptor.');
+        $this->setExpectedException(\Exception::class, 'Missing affiliationOwnerID on AffiliationDescriptor.');
         new AffiliationDescriptor($document->firstChild);
     }
 }
