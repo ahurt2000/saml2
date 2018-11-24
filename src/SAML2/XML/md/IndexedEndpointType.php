@@ -11,7 +11,7 @@ use SAML2\Utils;
  *
  * @package SimpleSAMLphp
  */
-class IndexedEndpointType extends EndpointType
+final class IndexedEndpointType extends EndpointType
 {
     /**
      * The index for this endpoint.
@@ -102,7 +102,7 @@ class IndexedEndpointType extends EndpointType
         assert(is_null($this->getIsDefault()) || is_bool($this->getIsDefault()));
 
         $e = parent::toXML($parent, $name);
-        $e->setAttribute('index', (string) $this->getIndex());
+        $e->setAttribute('index', strval($this->getIndex()));
 
         if ($this->getIsDefault() === true) {
             $e->setAttribute('isDefault', 'true');

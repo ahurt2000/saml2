@@ -12,7 +12,7 @@ use SAML2\Utils;
  *
  * @package SimpleSAMLphp
  */
-class AttributeConsumingService
+final class AttributeConsumingService
 {
     /**
      * The index of this AttributeConsumingService.

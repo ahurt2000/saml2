@@ -12,7 +12,7 @@ use SAML2\Constants;
 /**
  * Class representing the ECP Response element.
  */
-class Response
+final class Response
 {
     /**
      * The AssertionConsumerServiceURL.

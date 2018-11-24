@@ -19,7 +19,7 @@ use SAML2\XML\md\KeyDescriptor;
  *
  * @package SimpleSAMLphp
  */
-class Utils
+final class Utils
 {
     /**
      * Check the Signature in a XML element.
@@ -268,9 +268,9 @@ class Utils
      * Parse a boolean attribute.
      *
      * @param  \DOMElement $node          The element we should fetch the attribute from.
-     * @param  string     $attributeName The name of the attribute.
-     * @param  mixed|null $default       The value that should be returned if the attribute doesn't exist.
-     * @return bool|mixed The value of the attribute, or $default if the attribute doesn't exist.
+     * @param  string      $attributeName The name of the attribute.
+     * @param  mixed|null  $default       The value that should be returned if the attribute doesn't exist.
+     * @return mixed The value of the attribute, or $default if the attribute doesn't exist.
      * @throws \Exception
      */
     public static function parseBoolean(\DOMElement $node, string $attributeName, $default = null)

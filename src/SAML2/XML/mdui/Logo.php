@@ -10,7 +10,7 @@ namespace SAML2\XML\mdui;
  * @link: http://docs.oasis-open.org/security/saml/Post2.0/sstc-saml-metadata-ui/v1.0/sstc-saml-metadata-ui-v1.0.pdf
  * @package SimpleSAMLphp
  */
-class Logo
+final class Logo
 {
     /**
      * The url of this logo.

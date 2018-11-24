@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace SAML2\Tests\Assertion\Validation\ConstraintValidator;
 
+use SAML2\XML\saml\SubjectConfirmation;
+use SAML2\XML\saml\SubjectConfirmationData;
 use SAML2\Assertion\Validation\ConstraintValidator\SubjectConfirmationNotBefore;
 use SAML2\Assertion\Validation\Result;
 use SAML2\Tests\ControlledTimeTest;
@@ -27,8 +29,8 @@ class SubjectConfirmationNotBeforeTest extends ControlledTimeTest
     public function setUp()
     {
         parent::setUp();
-        $this->subjectConfirmation = new \SAML2\XML\saml\SubjectConfirmation();
-        $this->subjectConfirmationData = new \SAML2\XML\saml\SubjectConfirmationData();
+        $this->subjectConfirmation = new SubjectConfirmation();
+        $this->subjectConfirmationData = new SubjectConfirmationData();
         $this->subjectConfirmation->setSubjectConfirmationData($this->subjectConfirmationData);
     }
 

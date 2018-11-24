@@ -18,7 +18,7 @@ use \SimpleSAML\Store;
  *
  * @SuppressWarnings(PHPMD.CouplingBetweenObjects)
  */
-class HTTPArtifact extends Binding
+final class HTTPArtifact extends Binding
 {
     /**
      * @var \SimpleSAML\Configuration

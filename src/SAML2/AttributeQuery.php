@@ -19,7 +19,7 @@ namespace SAML2;
  *
  * @package SimpleSAMLphp
  */
-class AttributeQuery extends SubjectQuery
+final class AttributeQuery extends SubjectQuery
 {
     /**
      * The attributes, as an associative array.
@@ -129,8 +129,6 @@ class AttributeQuery extends SubjectQuery
      */
     public function setAttributeNameFormat(string $nameFormat)
     {
-        assert(is_string($nameFormat));
-
         $this->nameFormat = $nameFormat;
     }
 
