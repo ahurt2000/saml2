@@ -17,7 +17,7 @@ use SAML2\XML\saml\NameID;
  *
  * @package SimpleSAMLphp
  */
-class Assertion implements SignedElement
+class Assertion extends SignedElement
 {
     /**
      * The identifier of this assertion.
@@ -202,22 +202,6 @@ class Assertion implements SignedElement
      * @var string
      */
     private $nameFormat;
-
-    /**
-     * The private key we should use to sign the assertion.
-     *
-     * The private key can be null, in which case the assertion is sent unsigned.
-     *
-     * @var XMLSecurityKey|null
-     */
-    private $signatureKey;
-
-    /**
-     * List of certificates that should be included in the assertion.
-     *
-     * @var array
-     */
-    private $certificates;
 
     /**
      * The data needed to verify the signature.
@@ -1318,28 +1302,6 @@ class Assertion implements SignedElement
     public function setEncryptionKey(XMLSecurityKey $Key = null)
     {
         $this->encryptionKey = $Key;
-    }
-
-    /**
-     * Set the certificates that should be included in the assertion.
-     *
-     * The certificates should be strings with the PEM encoded data.
-     *
-     * @param array $certificates An array of certificates.
-     */
-    public function setCertificates(array $certificates)
-    {
-        $this->certificates = $certificates;
-    }
-
-    /**
-     * Retrieve the certificates that are included in the assertion.
-     *
-     * @return array An array of certificates.
-     */
-    public function getCertificates()
-    {
-        return $this->certificates;
     }
 
     /**
