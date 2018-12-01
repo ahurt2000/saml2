@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace SAML2\Tests\Assertion\Validation\ConstraintValidator;
+namespace SAML2\Assertion\Validation\ConstraintValidator;
 
 use SAML2\XML\saml\SubjectConfirmation;
 use SAML2\XML\saml\SubjectConfirmationData;
 use SAML2\Assertion\Validation\ConstraintValidator\SubjectConfirmationNotBefore;
 use SAML2\Assertion\Validation\Result;
-use SAML2\Tests\ControlledTimeTest;
+use SAML2\ControlledTimeTest;
 
 /**
  * Because we're mocking a static call, we have to run it in separate processes so as to no contaminate the other

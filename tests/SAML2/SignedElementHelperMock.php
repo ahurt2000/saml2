@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace SAML2\Tests;
+namespace SAML2;
 
 use SAML2\SignedElementHelper;
 use SAML2\DOMDocumentFactory;

@@ -32,7 +32,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "SAML2\\Tests\\": "tests/SAML2/"
+            "SAML2\\": "tests/SAML2/"
         }
     },
     "extra": {

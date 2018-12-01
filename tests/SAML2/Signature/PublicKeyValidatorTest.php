@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace SAML2\Tests\Signature;
+namespace SAML2\Signature;
 
 use SAML2\Tests\CertificatesMock;
 use SAML2\Certificate\Key;

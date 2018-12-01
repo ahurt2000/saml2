@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace SAML2\Tests\Configuration;
+namespace SAML2\Configuration;
 
 use SAML2\Configuration\ArrayAdapter;
 

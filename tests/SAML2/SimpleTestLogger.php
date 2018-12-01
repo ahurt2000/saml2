@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace SAML2\Tests;
+namespace SAML2;
 
 /**
  * A very simple in-memory logger that allows querying the log for existence of messages

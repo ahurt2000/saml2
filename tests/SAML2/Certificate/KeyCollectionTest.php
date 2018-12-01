@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace SAML2\Tests\Certificate;
+namespace SAML2\Certificate;
 
 use SAML2\Certificate\KeyCollection;
 use SAML2\Exception\InvalidArgumentException;

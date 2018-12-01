@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace SAML2\Tests\XML\ecp;
+namespace SAML2\XML\ecp;
 
 use stdClass;
 

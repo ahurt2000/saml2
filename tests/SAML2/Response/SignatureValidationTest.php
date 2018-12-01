@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace SAML2\Tests\Response;
+namespace SAML2\Response;
 
 use SAML2\Tests\CertificatesMock;
 use SAML2\Assertion;

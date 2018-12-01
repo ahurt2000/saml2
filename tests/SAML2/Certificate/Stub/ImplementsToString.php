@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace SAML2\Tests\Certificate\Stub;
+namespace SAML2\Certificate\Stub;
 
 class ImplementsToString
 {

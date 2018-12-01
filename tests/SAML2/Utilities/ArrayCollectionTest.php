@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace SAML2\Tests\Utilities;
+namespace SAML2\Utilities;
 
 use SAML2\Utilities\ArrayCollection;
 use SAML2\Exception\RuntimeException;

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace SAML2\Tests\Assertion\Validation\ConstraintValidator;
+namespace SAML2\Assertion\Validation\ConstraintValidator;
 
 use \SAML2\Assertion\Validation\ConstraintValidator\SubjectConfirmationRecipientMatches;
 use \SAML2\Assertion\Validation\ConstraintValidator\SubjectConfirmationResponseToMatches;
