@@ -914,7 +914,7 @@ class Assertion extends SignedElement
      *
      * @param bool $ea true to encrypt attributes in the assertion.
      */
-    public function setEncryptedAttributes(bool $ea)
+    public function setRequiredEncAttributes(bool $ea)
     {
         assert(is_bool($ea));
         $this->requiredEncAttributes = $ea;
