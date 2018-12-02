@@ -159,9 +159,8 @@ final class ContactPerson
      * Set the value of the contactType-property
      * @param string $contactType
      */
-    public function setContactType($contactType)
+    public function setContactType(string $contactType)
     {
-        assert(is_string($contactType));
         $this->contactType = $contactType;
     }
 
@@ -178,9 +177,8 @@ final class ContactPerson
      * Set the value of the Company-property
      * @param string|null $company
      */
-    public function setCompany($company)
+    public function setCompany(string $company = null)
     {
-        assert(is_string($company) || is_null($company));
         $this->Company = $company;
     }
 
@@ -197,9 +195,8 @@ final class ContactPerson
      * Set the value of the GivenName-property
      * @param string|null $givenName
      */
-    public function setGivenName($givenName)
+    public function setGivenName(string $givenName = null)
     {
-        assert(is_string($givenName) || is_null($givenName));
         $this->GivenName = $givenName;
     }
 
@@ -216,9 +213,8 @@ final class ContactPerson
      * Set the value of the SurName-property
      * @param string|null $surName
      */
-    public function setSurName($surName)
+    public function setSurName(string $surName)
     {
-        assert(is_string($surName) || is_null($surName));
         $this->SurName = $surName;
     }
 
@@ -299,10 +295,8 @@ final class ContactPerson
      * @param string $attr
      * @param string $value
      */
-    public function addContactPersonAttributes($attr, $value)
+    public function addContactPersonAttributes(string $attr, string $value)
     {
-        assert(is_string($attr));
-        assert(is_string($value));
         $this->ContactPersonAttributes[$attr] = $value;
     }
 

@@ -61,9 +61,8 @@ final class AdditionalMetadataLocation
      * Set the value of the namespace-property
      * @param string $namespace
      */
-    public function setNamespace($namespace)
+    public function setNamespace(string $namespace)
     {
-        assert(is_string($namespace));
         $this->namespace = $namespace;
     }
 
@@ -80,9 +79,8 @@ final class AdditionalMetadataLocation
      * Set the value of the location-property
      * @param string $location
      */
-    public function setLocation($location)
+    public function setLocation(string $location)
     {
-        assert(is_string($location));
         $this->location = $location;
     }
 

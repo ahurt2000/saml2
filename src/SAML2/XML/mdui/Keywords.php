@@ -66,9 +66,8 @@ final class Keywords
      * Set the value of the lang-property
      * @param string $lang
      */
-    public function setLanguage($lang)
+    public function setLanguage(string $lang = null)
     {
-        assert(is_string($lang) || is_null($lang));
         $this->lang = $lang;
     }
 
@@ -94,9 +93,8 @@ final class Keywords
      * Add the value to the Keywords-property
      * @param string $keyword
      */
-    public function addKeyword($keyword)
+    public function addKeyword(string $keyword)
     {
-        assert(is_string($keyword));
         $this->Keywords[] = $keyword;
     }
 

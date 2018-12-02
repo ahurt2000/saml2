@@ -143,9 +143,8 @@ class RoleDescriptor extends SignedElementHelper
      * Set the value of the ID-property
      * @param string|null $Id
      */
-    public function setID($Id = null)
+    public function setID(string $Id = null)
     {
-        assert(is_string($Id) || is_null($Id));
         $this->ID = $Id;
     }
 
@@ -162,9 +161,8 @@ class RoleDescriptor extends SignedElementHelper
      * Set the value of the validUntil-property
      * @param int|null $validUntil
      */
-    public function setValidUntil($validUntil = null)
+    public function setValidUntil(int $validUntil = null)
     {
-        assert(is_int($validUntil) || is_null($validUntil));
         $this->validUntil = $validUntil;
     }
 
@@ -181,9 +179,8 @@ class RoleDescriptor extends SignedElementHelper
      * Set the value of the cacheDuration-property
      * @param string|null $cacheDuration
      */
-    public function setCacheDuration($cacheDuration = null)
+    public function setCacheDuration(string $cacheDuration = null)
     {
-        assert(is_string($cacheDuration) || is_null($cacheDuration));
         $this->cacheDuration = $cacheDuration;
     }
 
@@ -209,9 +206,8 @@ class RoleDescriptor extends SignedElementHelper
      * Set the value of the errorURL-property
      * @param string|null $errorURL
      */
-    public function setErrorURL($errorURL = null)
+    public function setErrorURL(string $errorURL = null)
     {
-        assert(is_string($errorURL) || is_null($errorURL));
         if (!is_null($errorURL) && !filter_var($errorURL, FILTER_VALIDATE_URL)) {
             throw new \InvalidArgumentException('Provided argument is not a valid URL.');
         }

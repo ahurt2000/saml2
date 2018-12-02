@@ -243,9 +243,12 @@ class Assertion extends SignedElement
      */
     public function __construct(\DOMElement $xml = null)
     {
+        $issuer = new Issuer();
+        $issuer->setValue('');
+
         $this->setId(Utils::getContainer()->generateId());
         $this->setIssueInstant(Temporal::getTime());
-        $this->setIssuer('');
+        $this->setIssuer($issuer);
         $this->setAuthnInstant(Temporal::getTime());
         $this->setAttributes([]);
         $this->setAttributeNameFormat(Constants::NAMEFORMAT_UNSPECIFIED);
@@ -916,7 +919,6 @@ class Assertion extends SignedElement
      */
     public function setRequiredEncAttributes(bool $ea)
     {
-        assert(is_bool($ea));
         $this->requiredEncAttributes = $ea;
     }
 
@@ -1054,10 +1056,8 @@ class Assertion extends SignedElement
      *
      * @param string|null $signatureMethod
      */
-    public function setSignatureMethod($signatureMethod)
+    public function setSignatureMethod(string $signatureMethod = null)
     {
-        assert(is_string($signatureMethod) || is_null($signatureMethod));
-
         $this->signatureMethod = $signatureMethod;
     }
 
@@ -1315,9 +1315,8 @@ class Assertion extends SignedElement
     /**
      * @param bool $flag
      */
-    public function setWasSignedAtConstruction($flag)
+    public function setWasSignedAtConstruction(bool $flag)
     {
-        assert(is_bool($flag));
         $this->wasSignedAtConstruction = $flag;
     }
 

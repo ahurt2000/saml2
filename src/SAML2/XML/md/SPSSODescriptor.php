@@ -83,9 +83,8 @@ final class SPSSODescriptor extends SSODescriptorType
      * Set the value of the AuthnRequestsSigned-property
      * @param bool|null $flag
      */
-    public function setAuthnRequestsSigned($flag = null)
+    public function setAuthnRequestsSigned(bool $flag = null)
     {
-        assert(is_bool($flag) || is_null($flag));
         $this->AuthnRequestsSigned = $flag;
     }
 
@@ -102,9 +101,8 @@ final class SPSSODescriptor extends SSODescriptorType
      * Set the value of the WantAssertionsSigned-property
      * @param bool|null $flag
      */
-    public function setWantAssertionsSigned($flag = null)
+    public function setWantAssertionsSigned(bool $flag = null)
     {
-        assert(is_bool($flag) || is_null($flag));
         $this->WantAssertionsSigned = $flag;
     }
 

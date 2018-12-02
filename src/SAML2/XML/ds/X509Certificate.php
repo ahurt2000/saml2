@@ -49,9 +49,8 @@ final class X509Certificate
      * Set the value of the certificate-property
      * @param string $certificate
      */
-    public function setCertificate($certificate)
+    public function setCertificate(string $certificate)
     {
-        assert(is_string($certificate));
         $this->certificate = $certificate;
     }
 

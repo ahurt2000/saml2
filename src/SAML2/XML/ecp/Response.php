@@ -66,9 +66,8 @@ final class Response
      * Set the value of the AssertionConsumerServiceURL-property
      * @param string $assertionConsumerServiceURL
      */
-    public function setAssertionConsumerServiceURL($assertionConsumerServiceURL)
+    public function setAssertionConsumerServiceURL(string $assertionConsumerServiceURL)
     {
-        assert(is_string($assertionConsumerServiceURL));
         if (!filter_var($assertionConsumerServiceURL, FILTER_VALIDATE_URL)) {
             throw new \InvalidArgumentException('Provided argument is not a valid URL.');
         }

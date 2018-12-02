@@ -87,9 +87,8 @@ abstract class NameIDType extends BaseIDType
      * Set the value of the Format-property
      * @param string|null $format
      */
-    public function setFormat($format = null)
+    public function setFormat(string $format = null)
     {
-        assert(is_string($format) || is_null($format));
         $this->Format = $format;
     }
 
@@ -106,9 +105,8 @@ abstract class NameIDType extends BaseIDType
      * Set the value of the value-property
      * @param string|null $value
      */
-    public function setValue($value)
+    public function setValue(string $value = null)
     {
-        assert(is_string($value) || is_null($value));
         $this->value = $value;
     }
 
@@ -125,9 +123,8 @@ abstract class NameIDType extends BaseIDType
      * Set the value of the SPProvidedID-property
      * @param string|null $spProvidedID
      */
-    public function setSPProvidedID($spProvidedID)
+    public function setSPProvidedID(string $spProvidedID = null)
     {
-        assert(is_string($spProvidedID) || is_null($spProvidedID));
         $this->SPProvidedID = $spProvidedID;
     }
 

@@ -80,9 +80,8 @@ class SubjectConfirmation
      * Set the value of the Method-property
      * @param string $method
      */
-    public function setMethod($method)
+    public function setMethod(string $method)
     {
-        assert(is_string($method));
         $this->Method = $method;
     }
 
@@ -117,7 +116,7 @@ class SubjectConfirmation
      * Set the value of the SubjectConfirmationData-property
      * @param \SAML2\XML\saml\SubjectConfirmationData|null $subjectConfirmationData
      */
-    public function setSubjectConfirmationData($subjectConfirmationData = null)
+    public function setSubjectConfirmationData(SubjectConfirmationData $subjectConfirmationData = null)
     {
         $this->SubjectConfirmationData = $subjectConfirmationData;
     }

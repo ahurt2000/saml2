@@ -80,9 +80,8 @@ final class Logo
      * Set the value of the url-property
      * @param string $url
      */
-    public function setUrl($url)
+    public function setUrl(string $url)
     {
-        assert(is_string($url));
         if (!filter_var($url, FILTER_VALIDATE_URL)) {
             throw new \InvalidArgumentException('Provided argument is not a valid URL.');
         }
@@ -102,9 +101,8 @@ final class Logo
      * Set the value of the lang-property
      * @param string $lang
      */
-    public function setLanguage($lang)
+    public function setLanguage(string $lang)
     {
-        assert(is_string($lang));
         $this->lang = $lang;
     }
 
@@ -121,9 +119,8 @@ final class Logo
      * Set the value of the height-property
      * @param int $height
      */
-    public function setHeight($height)
+    public function setHeight(int $height)
     {
-        assert(is_int($height));
         $this->height = $height;
     }
 
@@ -140,9 +137,8 @@ final class Logo
      * Set the value of the width-property
      * @param int $width
      */
-    public function setWidth($width)
+    public function setWidth(int $width)
     {
-        assert(is_int($width));
         $this->width = $width;
     }
 

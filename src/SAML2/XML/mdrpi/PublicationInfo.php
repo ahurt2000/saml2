@@ -112,9 +112,8 @@ final class PublicationInfo
      * Set the value of the publisher-property
      * @param string $publisher
      */
-    public function setPublisher($publisher)
+    public function setPublisher(string $publisher)
     {
-        assert(is_string($publisher));
         $this->publisher = $publisher;
     }
 
@@ -122,9 +121,8 @@ final class PublicationInfo
      * Set the value of the creationInstant-property
      * @param int|null $creationInstant
      */
-    public function setCreationInstant($creationInstant = null)
+    public function setCreationInstant(int $creationInstant = null)
     {
-        assert(is_int($creationInstant) || is_null($creationInstant));
         $this->creationInstant = $creationInstant;
     }
 
@@ -132,9 +130,8 @@ final class PublicationInfo
      * Set the value of the publicationId-property
      * @param string|null $publicationId
      */
-    public function setPublicationId($publicationId = null)
+    public function setPublicationId(string $publicationId = null)
     {
-        assert(is_string($publicationId) || is_null($publicationId));
         $this->publicationId = $publicationId;
     }
 

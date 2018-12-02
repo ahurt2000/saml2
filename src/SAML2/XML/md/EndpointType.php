@@ -160,9 +160,8 @@ class EndpointType
      * Set the value of the Binding-property
      * @param string $binding
      */
-    public function setBinding($binding)
+    public function setBinding(string $binding)
     {
-        assert(is_string($binding));
         $this->Binding = $binding;
     }
 
@@ -179,9 +178,8 @@ class EndpointType
      * Set the value of the Location-property
      * @param string|null $location
      */
-    public function setLocation($location)
+    public function setLocation(string $location = null)
     {
-        assert(is_string($location) || is_null($location));
         $this->Location = $location;
     }
 
@@ -198,9 +196,8 @@ class EndpointType
      * Set the value of the ResponseLocation-property
      * @param string|null $responseLocation
      */
-    public function setResponseLocation($responseLocation)
+    public function setResponseLocation(string $responseLocation = null)
     {
-        assert(is_string($responseLocation) || is_null($responseLocation));
         $this->ResponseLocation = $responseLocation;
     }
 

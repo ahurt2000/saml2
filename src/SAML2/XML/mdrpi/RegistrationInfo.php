@@ -74,9 +74,8 @@ final class RegistrationInfo
      * Set the value of the registrationAuthority-property
      * @param string $registrationAuthority
      */
-    public function setRegistrationAuthority($registrationAuthority)
+    public function setRegistrationAuthority(string $registrationAuthority)
     {
-        assert(is_string($registrationAuthority));
         $this->registrationAuthority = $registrationAuthority;
     }
 
@@ -93,9 +92,8 @@ final class RegistrationInfo
      * Set the value of the registrationInstant-property
      * @param int|null $registrationInstant
      */
-    public function setRegistrationInstant($registrationInstant = null)
+    public function setRegistrationInstant(int $registrationInstant = null)
     {
-        assert(is_int($registrationInstant) || is_null($registrationInstant));
         $this->registrationInstant = $registrationInstant;
     }
 

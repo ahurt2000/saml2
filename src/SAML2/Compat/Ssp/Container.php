@@ -48,7 +48,7 @@ final class Container extends AbstractContainer
     /**
      * {@inheritdoc}
      */
-    public function redirect(string $url, $data = [])
+    public function redirect(string $url, array $data = [])
     {
         \SimpleSAML\Utils\HTTP::redirectTrustedURL($url, $data);
     }
@@ -56,7 +56,7 @@ final class Container extends AbstractContainer
     /**
      * {@inheritdoc}
      */
-    public function postRedirect(string $url, $data = [])
+    public function postRedirect(string $url, array $data = [])
     {
         \SimpleSAML\Utils\HTTP::submitPOSTData($url, $data);
     }

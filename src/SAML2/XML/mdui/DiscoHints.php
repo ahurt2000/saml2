@@ -143,7 +143,6 @@ final class DiscoHints
      */
     public function addChildren(Chunk $child)
     {
-        assert($child instanceof Chunk);
         $this->children[] = $child;
     }
 

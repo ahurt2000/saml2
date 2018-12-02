@@ -96,9 +96,8 @@ final class EntitiesDescriptor extends SignedElementHelper
      * Set the value of the Name-property
      * @param string|null $name
      */
-    public function setName($name = null)
+    public function setName(string $name = null)
     {
-        assert(is_string($name) || is_null($name));
         $this->Name = $name;
     }
 
@@ -115,9 +114,8 @@ final class EntitiesDescriptor extends SignedElementHelper
      * Set the value of the ID-property
      * @param string|null $Id
      */
-    public function setID($Id = null)
+    public function setID(string $Id = null)
     {
-        assert(is_string($Id) || is_null($Id));
         $this->ID = $Id;
     }
 
@@ -134,9 +132,8 @@ final class EntitiesDescriptor extends SignedElementHelper
      * Set the value of the validUntil-property
      * @param int|null $validUntil
      */
-    public function setValidUntil($validUntil = null)
+    public function setValidUntil(int $validUntil = null)
     {
-        assert(is_int($validUntil) || is_null($validUntil));
         $this->validUntil = $validUntil;
     }
 
@@ -153,9 +150,8 @@ final class EntitiesDescriptor extends SignedElementHelper
      * Set the value of the cacheDuration-property
      * @param string|null $cacheDuration
      */
-    public function setCacheDuration($cacheDuration = null)
+    public function setCacheDuration(string $cacheDuration = null)
     {
-        assert(is_string($cacheDuration) || is_null($cacheDuration));
         $this->cacheDuration = $cacheDuration;
     }
 

@@ -54,9 +54,8 @@ final class DigestMethod
      * Set the value of the Algorithm-property
      * @param string $algorithm
      */
-    public function setAlgorithm($algorithm)
+    public function setAlgorithm(string $algorithm)
     {
-        assert(is_string($algorithm));
         $this->Algorithm = $algorithm;
     }
 

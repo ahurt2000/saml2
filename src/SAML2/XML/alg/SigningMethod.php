@@ -52,9 +52,8 @@ final class SigningMethod
      * Set the value of the Algorithm-property
      * @param string $algorithm
      */
-    public function setAlgorithm($algorithm)
+    public function setAlgorithm(string $algorithm)
     {
-        assert(is_string($algorithm));
         $this->Algorithm = $algorithm;
     }
 
@@ -72,9 +71,8 @@ final class SigningMethod
      * Set the value of the MinKeySize-property
      * @param int|null $minKeySize
      */
-    public function setMinKeySize($minKeySize = null)
+    public function setMinKeySize(int $minKeySize = null)
     {
-        assert(is_int($minKeySize) || is_null($minKeySize));
         $this->MinKeySize = $minKeySize;
     }
 
@@ -91,9 +89,8 @@ final class SigningMethod
      * Set the value of the MaxKeySize-property
      * @param int|null $maxKeySize
      */
-    public function setMaxKeySize($maxKeySize = null)
+    public function setMaxKeySize(int $maxKeySize = null)
     {
-        assert(is_int($maxKeySize) || is_null($maxKeySize));
         $this->MaxKeySize = $maxKeySize;
     }
 

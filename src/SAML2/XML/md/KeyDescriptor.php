@@ -83,9 +83,8 @@ final class KeyDescriptor
      * Set the value of the use-property
      * @param string|null $use
      */
-    public function setUse($use)
+    public function setUse(string $use = null)
     {
-        assert(is_string($use) || is_null($use));
         $this->use = $use;
     }
 

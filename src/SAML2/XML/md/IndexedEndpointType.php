@@ -62,9 +62,8 @@ final class IndexedEndpointType extends EndpointType
      * Set the value of the index-property
      * @param int $index
      */
-    public function setIndex($index)
+    public function setIndex(int $index)
     {
-        assert(is_int($index));
         $this->index = $index;
     }
 
@@ -81,9 +80,8 @@ final class IndexedEndpointType extends EndpointType
      * Set the value of the isDefault-property
      * @param bool|null $flag
      */
-    public function setIsDefault($flag = null)
+    public function setIsDefault(bool $flag = null)
     {
-        assert(is_bool($flag) || is_null($flag));
         $this->isDefault = $flag;
     }
 

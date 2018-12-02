@@ -40,7 +40,7 @@ final class RequestedAttribute extends Attribute
 
     /**
      * Collect the value of the isRequired-property
-     * @return boolean|null
+     * @return bool|null
      */
     public function getIsRequired()
     {
@@ -51,9 +51,8 @@ final class RequestedAttribute extends Attribute
      * Set the value of the isRequired-property
      * @param boolean|null $flag
      */
-    public function setIsRequired($flag = null)
+    public function setIsRequired(bool $flag = null)
     {
-        assert(is_bool($flag) || is_null($flag));
         $this->isRequired = $flag;
     }
 

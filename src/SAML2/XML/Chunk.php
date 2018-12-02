@@ -72,9 +72,8 @@ final class Chunk implements \Serializable
      * Set the value of the localName-property
      * @param string $localName
      */
-    public function setLocalName($localName)
+    public function setLocalName(string $localName)
     {
-        assert(is_string($localName));
         $this->localName = $localName;
     }
 
@@ -91,9 +90,8 @@ final class Chunk implements \Serializable
      * Set the value of the namespaceURI-property
      * @param string|null $namespaceURI
      */
-    public function setNamespaceURI($namespaceURI = null)
+    public function setNamespaceURI(string $namespaceURI = null)
     {
-        assert(is_string($namespaceURI) || is_null($namespaceURI));
         $this->namespaceURI = $namespaceURI;
     }
 
@@ -101,9 +99,8 @@ final class Chunk implements \Serializable
      * Set the value of the xml-property
      * @param \DOMelement $xml
      */
-    private function setXml($xml)
+    private function setXml(\DOMElement $xml)
     {
-        assert($xml instanceof \DOMElement);
         $this->xml = $xml;
     }
 

@@ -61,9 +61,8 @@ final class Scope
      * Set the value of the scope-property
      * @param string $scope
      */
-    public function setScope($scope)
+    public function setScope(string $scope)
     {
-        assert(is_string($scope));
         $this->scope = $scope;
     }
 
@@ -78,11 +77,10 @@ final class Scope
 
     /**
      * Set the value of the regexp-property
-     * @param boolean $regexp
+     * @param bool $regexp
      */
-    public function setIsRegexpScope($regexp)
+    public function setIsRegexpScope(bool $regexp)
     {
-        assert(is_bool($regexp));
         $this->regexp = $regexp;
     }
 

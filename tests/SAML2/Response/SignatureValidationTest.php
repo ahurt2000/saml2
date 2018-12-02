@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace SAML2\Response;
 
-use SAML2\Tests\CertificatesMock;
+use SAML2\CertificatesMock;
 use SAML2\Assertion;
 use SAML2\Assertion\Processor as AssertionProcessor;
 use SAML2\Configuration\Destination;

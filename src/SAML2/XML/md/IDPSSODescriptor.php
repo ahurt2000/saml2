@@ -114,9 +114,8 @@ final class IDPSSODescriptor extends SSODescriptorType
      * Set the value of the WantAuthnRequestsSigned-property
      * @param bool|null $flag
      */
-    public function setWantAuthnRequestsSigned($flag = null)
+    public function setWantAuthnRequestsSigned(bool $flag = null)
     {
-        assert(is_bool($flag) || is_null($flag));
         $this->WantAuthnRequestsSigned = $flag;
     }
 

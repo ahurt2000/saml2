@@ -82,9 +82,8 @@ final class KeyInfo
      * Set the value of the Id-property
      * @param string|null $id
      */
-    public function setId($id = null)
+    public function setId(string $id = null)
     {
-        assert(is_string($id) || is_null($id));
         $this->Id = $id;
     }
 

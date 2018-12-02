@@ -75,9 +75,8 @@ class SubjectConfirmationData
      * Set the value of the NotBefore-property
      * @param int|null $notBefore
      */
-    public function setNotBefore($notBefore = null)
+    public function setNotBefore(int $notBefore = null)
     {
-        assert(is_int($notBefore) || is_null($notBefore));
         $this->NotBefore = $notBefore;
     }
 
@@ -94,9 +93,8 @@ class SubjectConfirmationData
      * Set the value of the NotOnOrAfter-property
      * @param int|null $notOnOrAfter
      */
-    public function setNotOnOrAfter($notOnOrAfter = null)
+    public function setNotOnOrAfter(int $notOnOrAfter = null)
     {
-        assert(is_int($notOnOrAfter) || is_null($notOnOrAfter));
         $this->NotOnOrAfter = $notOnOrAfter;
     }
 
@@ -113,9 +111,8 @@ class SubjectConfirmationData
      * Set the value of the Recipient-property
      * @param string|null $recipient
      */
-    public function setRecipient($recipient = null)
+    public function setRecipient(string $recipient = null)
     {
-        assert(is_string($recipient) || is_null($recipient));
         $this->Recipient = $recipient;
     }
 
@@ -132,9 +129,8 @@ class SubjectConfirmationData
      * Set the value of the InResponseTo-property
      * @param string|null $inResponseTo
      */
-    public function setInResponseTo($inResponseTo = null)
+    public function setInResponseTo(string $inResponseTo = null)
     {
-        assert(is_string($inResponseTo) || is_null($inResponseTo));
         $this->InResponseTo = $inResponseTo;
     }
 
@@ -151,9 +147,8 @@ class SubjectConfirmationData
      * Set the value of the Address-property
      * @param string|null $address
      */
-    public function setAddress($address = null)
+    public function setAddress(string $address = null)
     {
-        assert(is_string($address) || is_null($address));
         if (!is_null($address) && !filter_var($address, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4 | FILTER_FLAG_IPV6)) {
             throw new \InvalidArgumentException('Provided argument is not a valid IP address.');
         }

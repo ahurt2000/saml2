@@ -86,9 +86,8 @@ abstract class BaseIDType
      * Set the value of the NameQualifier-property
      * @param string|null $nameQualifier
      */
-    public function setNameQualifier($nameQualifier = null)
+    public function setNameQualifier(string $nameQualifier = null)
     {
-        assert(is_string($nameQualifier) || is_null($nameQualifier));
         $this->NameQualifier = $nameQualifier;
     }
 
@@ -105,9 +104,8 @@ abstract class BaseIDType
      * Set the value of the SPNameQualifier-property
      * @param string|null $spNameQualifier
      */
-    public function setSPNameQualifier($spNameQualifier = null)
+    public function setSPNameQualifier(string $spNameQualifier = null)
     {
-        assert(is_string($spNameQualifier) || is_null($spNameQualifier));
         $this->SPNameQualifier = $spNameQualifier;
     }
 
