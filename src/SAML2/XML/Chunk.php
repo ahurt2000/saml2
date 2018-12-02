@@ -49,6 +49,16 @@ final class Chunk implements \Serializable
     }
 
     /**
+     * Get this \DOMElement.
+     *
+     * @return \DOMElement This element.
+     */
+    public function getXML()
+    {
+        return $this->xml;
+    }
+
+    /**
      * Append this XML element to a different XML element.
      *
      * @param  \DOMElement $parent The element we should append this element to.

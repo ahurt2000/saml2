@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace SAML2\Utilities;
 
-use SAML2\Tests\CertificatesMock;
+use SAML2\CertificatesMock;
 use SAML2\Utilities\Certificate;
 
 class CertificateTest extends \PHPUnit\Framework\TestCase

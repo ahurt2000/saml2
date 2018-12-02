@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace SAML2\Certificate;
 
+use SAML2\Exception\InvalidArgumentException;
 use SAML2\Utilities\ArrayCollection;
 
 /**

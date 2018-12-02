@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace SAML2;
 
-use SAML2\Tests\SignedElementHelperMock;
-use SAML2\Tests\CertificatesMock;
+use SAML2\SignedElementHelperMock;
+use SAML2\CertificatesMock;
 use RobRichards\XMLSecLibs\XMLSecurityDSig;
 use RobRichards\XMLSecLibs\XMLSecurityKey;
 use SAML2\SignedElementHelper;

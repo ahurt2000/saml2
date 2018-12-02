@@ -213,7 +213,7 @@ final class ContactPerson
      * Set the value of the SurName-property
      * @param string|null $surName
      */
-    public function setSurName(string $surName)
+    public function setSurName(string $surName = null)
     {
         $this->SurName = $surName;
     }

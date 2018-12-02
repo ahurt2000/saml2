@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace SAML2\Certificate;
 
-use SAML2\Tests\CertificatesMock;
+use SAML2\CertificatesMock;
 use SAML2\Certificate\PrivateKey;
 
 class PrivateKeyTest extends \Mockery\Adapter\Phpunit\MockeryTestCase
