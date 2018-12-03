@@ -57,8 +57,8 @@ XML
         $list = Extensions::getList($this->testElement);
 
         $this->assertCount(2, $list);
-        $this->assertEquals("urn:mynamespace", $list[0]->namespaceURI);
-        $this->assertEquals("ExampleElement", $list[1]->localName);
+        $this->assertEquals("urn:mynamespace", $list[0]->getNamespaceURI());
+        $this->assertEquals("ExampleElement", $list[1]->getLocalName());
     }
 
     /**
@@ -71,8 +71,8 @@ XML
         $list = Extensions::getList($this->testElement);
 
         $this->assertCount(2, $list);
-        $this->assertEquals("urn:mynamespace", $list[0]->namespaceURI);
-        $this->assertEquals("ExampleElement", $list[1]->localName);
+        $this->assertEquals("urn:mynamespace", $list[0]->getNamespaceURI());
+        $this->assertEquals("ExampleElement", $list[1]->getLocalName());
     }
 
     /**
@@ -81,7 +81,7 @@ XML
     public function testExtensionsAddSome()
     {
         $attribute = new Attribute();
-        $attribute->Name = 'TheName';
+        $attribute->setName('TheName');
         $scope = new Scope();
         $scope->setScope("scope");
 
@@ -90,9 +90,9 @@ XML
         $list = Extensions::getList($this->testElement);
 
         $this->assertCount(4, $list);
-        $this->assertEquals("urn:mynamespace", $list[0]->namespaceURI);
-        $this->assertEquals("ExampleElement", $list[1]->localName);
-        $this->assertEquals("Attribute", $list[2]->localName);
-        $this->assertEquals("urn:mace:shibboleth:metadata:1.0", $list[3]->namespaceURI);
+        $this->assertEquals("urn:mynamespace", $list[0]->getNamespaceURI());
+        $this->assertEquals("ExampleElement", $list[1]->getLocalName());
+        $this->assertEquals("Attribute", $list[2]->getLocalName());
+        $this->assertEquals("urn:mace:shibboleth:metadata:1.0", $list[3]->getNamespaceURI());
     }
 }

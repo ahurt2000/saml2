@@ -102,7 +102,7 @@ XML;
         $logoutRequest->decryptNameId(CertificatesMock::getPrivateKey());
 
         $nameId = $logoutRequest->getNameId();
-        $this->assertEquals('TheNameIDValue', $nameId->value);
+        $this->assertEquals('TheNameIDValue', $nameId->getValue());
     }
 
     public function testEncryptedNameId()

@@ -31,7 +31,7 @@ class ArtifactResponseTest extends \PHPUnit\Framework\TestCase
 
         $artifactIssuer = Utils::xpQuery($artifactResponseElement, './saml:Issuer');
         $this->assertCount(1, $artifactIssuer);
-        $this->assertEquals($issuer1->value, $artifactIssuer[0]->textContent);
+        $this->assertEquals($issuer1->getValue(), $artifactIssuer[0]->textContent);
 
         $authnelement = Utils::xpQuery($artifactResponseElement, './saml_protocol:AuthnRequest/saml:Issuer');
         $this->assertCount(1, $authnelement);

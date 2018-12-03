@@ -23,12 +23,12 @@ class AttributeValueTest extends \PHPUnit\Framework\TestCase
     public function testEmptyStringAttribute()
     {
         $attribute = new Attribute();
-        $attribute->Name = 'TheName';
-        $attribute->NameFormat = 'TheNameFormat';
-        $attribute->FriendlyName = 'TheFriendlyName';
-        $attribute->AttributeValue = [
+        $attribute->setName('TheName');
+        $attribute->setNameFormat('TheNameFormat');
+        $attribute->setFriendlyName('TheFriendlyName');
+        $attribute->setAttributeValue([
             new AttributeValue(""),
-        ];
+        ]);
 
         $document = DOMDocumentFactory::fromString('<root />');
         $returnedStructure = $attribute->toXML($document->firstChild);
@@ -45,7 +45,7 @@ ATTRIBUTEVALUE
         $expectedStructure = $expectedStructureDocument->documentElement;
 
         $this->assertEqualXMLStructure($expectedStructure, $returnedStructure);
-        $this->assertEquals("", $attribute->AttributeValue[0]->getString());
+        $this->assertEquals("", $attribute->getAttributeValue()[0]->getString());
     }
 
     /**
@@ -54,9 +54,9 @@ ATTRIBUTEVALUE
     public function testCreateAttributeFromDOMElement()
     {
         $attribute = new Attribute();
-        $attribute->Name = 'TheName';
-        $attribute->NameFormat = 'TheNameFormat';
-        $attribute->FriendlyName = 'TheFriendlyName';
+        $attribute->setName('TheName');
+        $attribute->setNameFormat('TheNameFormat');
+        $attribute->setFriendlyName('TheFriendlyName');
 
         $element = new \DOMDocument();
         $element->loadXML(<<<ATTRIBUTEVALUE
@@ -64,9 +64,9 @@ ATTRIBUTEVALUE
 ATTRIBUTEVALUE
         );
 
-        $attribute->AttributeValue = [
+        $attribute->setAttributeValue([
             new AttributeValue($element->documentElement),
-        ];
+        ]);
 
         $document = DOMDocumentFactory::fromString('<root />');
         $returnedStructure = $attribute->toXML($document->firstChild);
@@ -84,7 +84,7 @@ ATTRIBUTEXML
         $expectedStructure = $expectedStructureDocument->documentElement;
 
         $this->assertEqualXMLStructure($expectedStructure, $returnedStructure);
-        $this->assertEquals("urn:collab:person:surftest.nl:example", $attribute->AttributeValue[0]->getString());
+        $this->assertEquals("urn:collab:person:surftest.nl:example", $attribute->getAttributeValue()[0]->getString());
     }
 
     /**
