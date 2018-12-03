@@ -23,14 +23,14 @@ final class KeyDescriptor
      *
      * @var string|null
      */
-    public $use;
+    private $use;
 
     /**
      * The KeyInfo for this key.
      *
      * @var \SAML2\XML\ds\KeyInfo
      */
-    public $KeyInfo;
+    private $KeyInfo;
 
     /**
      * Supported EncryptionMethods.
@@ -39,7 +39,7 @@ final class KeyDescriptor
      *
      * @var \SAML2\XML\Chunk[]
      */
-    public $EncryptionMethod = [];
+    private $EncryptionMethod = [];
 
     /**
      * Initialize an KeyDescriptor.

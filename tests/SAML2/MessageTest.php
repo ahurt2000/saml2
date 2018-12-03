@@ -130,7 +130,7 @@ AUTHNREQUEST
         $xml_issuer = $xml_issuer[0];
 
         $this->assertFalse($xml_issuer->hasAttributes());
-        $this->assertEquals($issuer->value, $xml_issuer->textContent);
+        $this->assertEquals($issuer->getValue(), $xml_issuer->textContent);
 
         // now, try an Issuer with another format and attributes
         $issuer->setFormat(Constants::NAMEID_UNSPECIFIED);
@@ -210,9 +210,9 @@ AUTHNREQUEST
         $message = Message::fromXML($authnRequest->documentElement);
         $exts = $message->getExtensions();
         $this->assertCount(2, $exts);
-        $this->assertEquals("myextElt", $exts[0]->localName);
-        $this->assertEquals("example1", $exts[0]->xml->textContent);
-        $this->assertEquals("myextElt", $exts[1]->localName);
+        $this->assertEquals("myextElt", $exts[0]->getLocalName());
+        $this->assertEquals("example1", $exts[0]->getXML()->textContent);
+        $this->assertEquals("myextElt", $exts[1]->getLocalName());
     }
 
     /**

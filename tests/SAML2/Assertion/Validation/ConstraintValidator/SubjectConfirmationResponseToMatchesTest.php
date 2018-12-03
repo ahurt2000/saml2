@@ -33,7 +33,7 @@ class SubjectConfirmationResponseToMatchesTest extends \Mockery\Adapter\Phpunit\
         parent::setUp();
         $this->subjectConfirmation = new SubjectConfirmation();
         $this->subjectConfirmationData = new SubjectConfirmationData();
-        $this->subjectConfirmation->SubjectConfirmationData = $this->subjectConfirmationData;
+        $this->subjectConfirmation->setSubjectConfirmationData($this->subjectConfirmationData);
         $this->response = m::mock(Response::class);
     }
 

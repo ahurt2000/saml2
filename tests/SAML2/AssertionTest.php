@@ -307,7 +307,7 @@ XML;
         $assertion = new Assertion($document->documentElement);
         $authnContextDecl = $assertion->getAuthnContextDecl();
         $this->assertNotEmpty($authnContextDecl);
-        $this->assertEquals('AuthnContextDecl', $authnContextDecl->localName);
+        $this->assertEquals('AuthnContextDecl', $authnContextDecl->getLocalName());
         $childLocalName = $authnContextDecl->xml->childNodes->item(1)->localName;
         $this->assertEquals('AuthenticationContextDeclaration', $childLocalName);
 
@@ -386,7 +386,7 @@ XML;
         $xml_issuer = $xml_issuer[0];
 
         $this->assertFalse($xml_issuer->hasAttributes());
-        $this->assertEquals($issuer->value, $xml_issuer->textContent);
+        $this->assertEquals($issuer->getValue(), $xml_issuer->textContent);
 
         // now, try an Issuer with another format and attributes
         $issuer->setFormat(Constants::NAMEID_UNSPECIFIED);

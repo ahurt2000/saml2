@@ -128,7 +128,7 @@ XML;
 
         $logoutRequest->decryptNameId(CertificatesMock::getPrivateKey());
         $nameId = $logoutRequest->getNameId();
-        $this->assertEquals('TheNameIDValue', $nameId->value);
+        $this->assertEquals('TheNameIDValue', $nameId->getValue());
     }
 
     public function testDecryptingNameIdForgotToDecryptThrowsException()
@@ -152,8 +152,8 @@ XML;
         $this->logoutRequestElement = $document->firstChild;
 
         $logoutRequest = new LogoutRequest($this->logoutRequestElement);
-        $this->assertEquals("frits", $logoutRequest->getNameId()->value);
-        $this->assertEquals("urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified", $logoutRequest->getNameId()->Format);
+        $this->assertEquals("frits", $logoutRequest->getNameId()->getValue());
+        $this->assertEquals("urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified", $logoutRequest->getNameId()->getFormat());
 
         $this->assertFalse($logoutRequest->isNameIdEncrypted());
         $this->assertNull($logoutRequest->decryptNameId(CertificatesMock::getPrivateKey()));

@@ -20,7 +20,7 @@ final class AttributeValue implements \Serializable
      *
      * @var \DOMElement
      */
-    public $element;
+    private $element;
 
     /**
      * Create an AttributeValue.

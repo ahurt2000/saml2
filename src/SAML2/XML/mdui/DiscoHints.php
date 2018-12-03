@@ -22,28 +22,28 @@ final class DiscoHints
      *
      * @var \SAML2\XML\Chunk[]
      */
-    public $children = [];
+    private $children = [];
 
     /**
      * The IPHint, as an array of strings.
      *
      * @var string[]
      */
-    public $IPHint = [];
+    private $IPHint = [];
 
     /**
      * The DomainHint, as an array of strings.
      *
      * @var string[]
      */
-    public $DomainHint = [];
+    private $DomainHint = [];
 
     /**
      * The GeolocationHint, as an array of strings.
      *
      * @var string[]
      */
-    public $GeolocationHint = [];
+    private $GeolocationHint = [];
 
     /**
      * Create a DiscoHints element.

@@ -19,14 +19,14 @@ final class Keywords
      *
      * @var string[]
      */
-    public $Keywords;
+    private $Keywords;
 
     /**
      * The language of this item.
      *
      * @var string|null
      */
-    public $lang;
+    private $lang;
 
     /**
      * Initialize a Keywords.

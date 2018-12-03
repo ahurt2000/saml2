@@ -21,14 +21,14 @@ final class EntitiesDescriptor extends SignedElementHelper
      *
      * @var string|null
      */
-    public $ID;
+    private $ID;
 
     /**
      * The name of this entity collection.
      *
      * @var string|null
      */
-    public $Name;
+    private $Name;
 
     /**
      * Extensions on this element.
@@ -37,14 +37,14 @@ final class EntitiesDescriptor extends SignedElementHelper
      *
      * @var array
      */
-    public $Extensions = [];
+    private $Extensions = [];
 
     /**
      * Child EntityDescriptor and EntitiesDescriptor elements.
      *
      * @var (\SAML2\XML\md\EntityDescriptor|\SAML2\XML\md\EntitiesDescriptor)[]
      */
-    public $children = [];
+    private $children = [];
 
     /**
      * Initialize an EntitiesDescriptor.

@@ -19,7 +19,7 @@ final class Response
      *
      * @var string
      */
-    public $AssertionConsumerServiceURL;
+    private $AssertionConsumerServiceURL;
 
     /**
      * Create a ECP Response element.

@@ -33,7 +33,7 @@ final class Issuer extends NameIDType
      *
      * @var boolean
      */
-    public $Saml2IssuerShowAll = false; //setting true break saml-core-2.0-os 8.3.6
+    private $Saml2IssuerShowAll = false; //setting true break saml-core-2.0-os 8.3.6
 
     /**
      * Initialize a saml:NameIDType, either from scratch or from an existing \DOMElement.

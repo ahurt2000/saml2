@@ -28,7 +28,7 @@ final class EntityAttributes
      *
      * @var (\SAML2\XML\saml\Attribute|\SAML2\XML\Chunk)[]
      */
-    public $children;
+    private $children;
 
     /**
      * Create a EntityAttributes element.

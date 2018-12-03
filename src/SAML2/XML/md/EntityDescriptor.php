@@ -21,14 +21,14 @@ final class EntityDescriptor extends SignedElementHelper
      *
      * @var string
      */
-    public $entityID;
+    private $entityID;
 
     /**
      * The ID of this element.
      *
      * @var string|null
      */
-    public $ID;
+    private $ID;
 
     /**
      * Extensions on this element.
@@ -37,7 +37,7 @@ final class EntityDescriptor extends SignedElementHelper
      *
      * @var array
      */
-    public $Extensions = [];
+    private $Extensions = [];
 
     /**
      * Array with all roles for this entity.
@@ -46,35 +46,35 @@ final class EntityDescriptor extends SignedElementHelper
      *
      * @var (\SAML2\XML\md\UnknownRoleDescriptor|\SAML2\XML\md\IDPSSODescriptor|\SAML2\XML\md\SPSSODescriptor|\SAML2\XML\md\AuthnAuthorityDescriptor|\SAML2\XML\md\AttributeAuthorityDescriptor|\SAML2\XML\md\PDPDescriptor)[]
      */
-    public $RoleDescriptor = [];
+    private $RoleDescriptor = [];
 
     /**
      * AffiliationDescriptor of this entity.
      *
      * @var \SAML2\XML\md\AffiliationDescriptor|null
      */
-    public $AffiliationDescriptor = null;
+    private $AffiliationDescriptor = null;
 
     /**
      * Organization of this entity.
      *
      * @var \SAML2\XML\md\Organization|null
      */
-    public $Organization = null;
+    private $Organization = null;
 
     /**
      * ContactPerson elements for this entity.
      *
      * @var \SAML2\XML\md\ContactPerson[]
      */
-    public $ContactPerson = [];
+    private $ContactPerson = [];
 
     /**
      * AdditionalMetadataLocation elements for this entity.
      *
      * @var \SAML2\XML\md\AdditionalMetadataLocation[]
      */
-    public $AdditionalMetadataLocation = [];
+    private $AdditionalMetadataLocation = [];
 
     /**
      * Initialize an EntitiyDescriptor.
