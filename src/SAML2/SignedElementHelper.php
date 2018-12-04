@@ -29,11 +29,11 @@ class SignedElementHelper extends SignedElement
      */
     private $validUntil;
 
-    /**	
-     * The length of time this element can be cached, as string.	
-     *	
-     * @var string|null	
-     */	
+    /**
+     * The length of time this element can be cached, as string.
+     *
+     * @var string|null
+     */
     public $cacheDuration;
 
     /**
@@ -168,21 +168,22 @@ class SignedElementHelper extends SignedElement
         $this->validUntil = $validUntil;
     }
 
-    /**	
-     * Collect the value of the cacheDuration-property	
-     * @return string|null	
-     */	
-    public function getCacheDuration()	
-    {	
-        return $this->cacheDuration;	
-    }	
-     /**	
-     * Set the value of the cacheDuration-property	
-     * @param string|null $cacheDuration	
-     */	
-    public function setCacheDuration(string $cacheDuration = null)	
-    {	
-        $this->cacheDuration = $cacheDuration;	
+    /**
+     * Collect the value of the cacheDuration-property
+     * @return string|null
+     */
+    public function getCacheDuration()
+    {
+        return $this->cacheDuration;
+    }
+
+    /**
+     * Set the value of the cacheDuration-property
+     * @param string|null $cacheDuration
+     */
+    public function setCacheDuration(string $cacheDuration = null)
+    {
+        $this->cacheDuration = $cacheDuration;
     }
 
     /**
