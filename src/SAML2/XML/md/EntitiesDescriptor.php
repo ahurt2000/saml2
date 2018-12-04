@@ -120,42 +120,6 @@ final class EntitiesDescriptor extends SignedElementHelper
     }
 
     /**
-     * Collect the value of the validUntil-property
-     * @return int|null
-     */
-    public function getValidUntil()
-    {
-        return $this->validUntil;
-    }
-
-    /**
-     * Set the value of the validUntil-property
-     * @param int|null $validUntil
-     */
-    public function setValidUntil(int $validUntil = null)
-    {
-        $this->validUntil = $validUntil;
-    }
-
-    /**
-     * Collect the value of the cacheDuration-property
-     * @return string|null
-     */
-    public function getCacheDuration()
-    {
-        return $this->cacheDuration;
-    }
-
-    /**
-     * Set the value of the cacheDuration-property
-     * @param string|null $cacheDuration
-     */
-    public function setCacheDuration(string $cacheDuration = null)
-    {
-        $this->cacheDuration = $cacheDuration;
-    }
-
-    /**
      * Collect the value of the Extensions-property
      * @return \SAML2\XML\Chunk[]
      */
